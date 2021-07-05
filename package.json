@@ -1,0 +1,26 @@
+{
+  "name": "dbretrieve",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "start:db": "export POSTGRES_CONTAINER_ID=$(docker run --rm -e POSTGRES_HOST_AUTH_METHOD=trust -d -p 5432:5432 postgres)",
+    "stop:db": "docker stop $POSTGRES_CONTAINER_ID",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexandercnigro/dbretrieve.git"
+  },
+  "author": "Alexander Nigro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexandercnigro/dbretrieve/issues"
+  },
+  "homepage": "https://github.com/alexandercnigro/dbretrieve#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "postgres": "^1.0.2"
+  }
+}
